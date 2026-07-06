@@ -20,3 +20,40 @@ package-lock.json
 *.tmp
 *.temp
 prompt.txt
+
+# ============================================
+# WEB APP FILES (ignored - not part of QT project)
+# ============================================
+index.html
+styles.css
+app.js
+serve*.bat
+serve.py
+serve.sh
+
+# Web assets (SVGs, images for web app)
+assets/
+
+# ============================================
+# QT C++ BUILD ARTIFACTS
+# ============================================
+qt/build/
+*.pro.user
+*.pro.user.*
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+Makefile
+*.o
+*.obj
+*.exe
+*.dll
+*.lib
+*.so
+*.dylib
+
+# ============================================
+# OPENCODE / TOOLING
+# ============================================
+.opencode/node_modules/
