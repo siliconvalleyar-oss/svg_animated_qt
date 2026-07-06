@@ -110,5 +110,5 @@
 - [x] Slideshow básico
 - [x] Gestión de workspaces
 - [x] Soporte multiplataforma (Windows, Mac, Linux)
-- [x] Servidor local interactivo
 - [x] Documentación completa
+- [x] Qt5 compatible

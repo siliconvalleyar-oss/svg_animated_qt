@@ -24,8 +24,8 @@ Aplicación de escritorio para animar archivos SVG con efectos predefinidos y co
 
 ## Requisitos
 
-- Qt 6.x (Core, Gui, Widgets, Svg, Xml)
-- CMake 3.20+
+- Qt 5.x (Core, Gui, Widgets, Svg, Xml)
+- CMake 3.16+
 - Compilador C++17
 
 ## Compilación

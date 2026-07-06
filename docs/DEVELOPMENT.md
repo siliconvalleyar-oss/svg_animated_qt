@@ -61,7 +61,7 @@ Los temas se definen en `Theme.cpp` con soporte para:
 
 ```bash
 cd qt/build
-cmake --build . --target svg-animator
+cmake --build .
 ./svg-animator
 ```
 
@@ -74,6 +74,6 @@ ctest --output-on-failure
 
 ## Dependencias
 
-- Qt 6.x (Core, Gui, Widgets, Svg, Xml)
-- CMake 3.20+
+- Qt 5.x (Core, Gui, Widgets, Svg, Xml)
+- CMake 3.16+
 - Estándar C++17

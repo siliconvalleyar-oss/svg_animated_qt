@@ -48,7 +48,8 @@ cd qt
 mkdir build && cd build
 cmake ..
 cmake --build .
-./svg-animator
+# Windows: .\Release\svg-animator.exe
+# Linux/Mac: ./svg-animator
 ```
 
 ## Documentación
