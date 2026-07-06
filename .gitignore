@@ -1,25 +1,72 @@
-# OS
+# ============================================
+# OS SPECIFIC
+# ============================================
 .DS_Store
 Thumbs.db
+Desktop.ini
+*.stackdump
 
-# Editor
+# ============================================
+# EDITOR / IDE
+# ============================================
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
+*.sublime-project
+*.sublime-workspace
+.project
+.cproject
+.settings/
 
-# Node
-node_modules/
-package-lock.json
+# ============================================
+# QT / CMAKE BUILD ARTIFACTS
+# ============================================
+qt/build/
+qt/build-*/
+qt/bin/
+qt/lib/
+*.pro.user
+*.pro.user.*
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+Makefile
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CMakeScripts/
+CTestTestfile.cmake
 
-# Logs
+# ============================================
+# COMPILER ARTIFACTS
+# ============================================
+*.o
+*.obj
+*.exe
+*.dll
+*.lib
+*.so
+*.dylib
+*.a
+*.app/
+*.dmg
+*.pkg
+*.deb
+*.rpm
+*.AppImage
+
+# ============================================
+# DEBUG FILES
+# ============================================
+*.pdb
+*.ilk
+*.idb
+*.exp
 *.log
-
-# Temp
-*.tmp
-*.temp
-prompt.txt
+*.trace
 
 # ============================================
 # WEB APP FILES (ignored - not part of QT project)
@@ -35,25 +82,17 @@ serve.sh
 assets/
 
 # ============================================
-# QT C++ BUILD ARTIFACTS
+# NODE / TOOLING
 # ============================================
-qt/build/
-*.pro.user
-*.pro.user.*
-moc_*.cpp
-moc_*.h
-qrc_*.cpp
-ui_*.h
-Makefile
-*.o
-*.obj
-*.exe
-*.dll
-*.lib
-*.so
-*.dylib
+node_modules/
+package-lock.json
+.opencode/node_modules/
 
 # ============================================
-# OPENCODE / TOOLING
+# TEMP / MISC
 # ============================================
-.opencode/node_modules/
+*.tmp
+*.temp
+prompt.txt
+*.bak
+*.orig

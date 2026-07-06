@@ -6,6 +6,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
+# Set output directory
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+
 find_package(Qt5 REQUIRED COMPONENTS Core Gui Widgets Svg Xml)
 
 set(SOURCES
@@ -50,3 +53,41 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE src)
+
+# Platform-specific configurations
+if(WIN32)
+    # Windows: Set subsystem to Windows (no console window)
+    set_target_properties(${PROJECT_NAME} PROPERTIES
+        WIN32_EXECUTABLE TRUE
+        LINK_FLAGS "/SUBSYSTEM:WINDOWS"
+    )
+    # Add Windows-specific defines
+    target_compile_definitions(${PROJECT_NAME} PRIVATE
+        UNICODE
+        _UNICODE
+    )
+elseif(APPLE)
+    # macOS: Create app bundle
+    set_target_properties(${PROJECT_NAME} PROPERTIES
+        MACOSX_BUNDLE TRUE
+        MACOSX_BUNDLE_BUNDLE_NAME "SVG Animator"
+        MACOSX_BUNDLE_BUNDLE_VERSION "${PROJECT_VERSION}"
+        MACOSX_BUNDLE_SHORT_VERSION_STRING "${PROJECT_VERSION}"
+        MACOSX_BUNDLE_GUI_IDENTIFIER "com.svganimator.app"
+    )
+    # Add macOS-specific flags
+    target_compile_options(${PROJECT_NAME} PRIVATE "-Wno-deprecated")
+else()
+    # Linux/Unix: Install to standard locations
+    install(TARGETS ${PROJECT_NAME}
+        RUNTIME DESTINATION bin
+        BUNDLE DESTINATION bin
+    )
+endif()
+
+# Set compiler warnings
+if(MSVC)
+    target_compile_options(${PROJECT_NAME} PRIVATE /W4)
+else()
+    target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Wextra -Wpedantic)
+endif()

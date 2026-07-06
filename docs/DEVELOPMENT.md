@@ -6,7 +6,7 @@
 
 - **MainWindow**: Ventana principal y orquestación de componentes
 - **SvgView**: Widget Qt para visualización y manipulación de SVGs
-- **AnimationEngine**: Motor de animaciones CSS con soporte para 13 presets
+- **AnimationEngine**: Motor de animaciones con 19 presets
 - **ElementPanel**: Panel lateral para selección de elementos del SVG
 - **ControlsWidget**: Controles de animación (velocidad, dirección, etc.)
 - **ExportManager**: Generación de SVGs animados autocontenidos
@@ -59,10 +59,29 @@ Los temas se definen en `Theme.cpp` con soporte para:
 
 ## Compilación en desarrollo
 
+### Windows
+
+```cmd
+cd qt
+build.bat
+```
+
+### macOS / Linux
+
+```bash
+cd qt
+chmod +x build.sh
+./build.sh
+```
+
+### Manual
+
 ```bash
 cd qt/build
 cmake --build .
-./svg-animator
+./bin/svg-animator  # Linux
+./bin/svg-animator.app/Contents/MacOS/svg-animator  # macOS
+.\bin\Release\svg-animator.exe  # Windows
 ```
 
 ## Testing
@@ -72,8 +91,80 @@ cd qt/build
 ctest --output-on-failure
 ```
 
+## Debug
+
+### Windows (Visual Studio)
+
+1. Abrir `svg-animator.sln` generado por CMake
+2. Seleccionar configuración Debug
+3. Presionar F5 para debugear
+
+### macOS (Xcode)
+
+```bash
+cd qt/build
+cmake -G Xcode ..
+open svg-animator.xcodeproj
+```
+
+### Linux (GDB)
+
+```bash
+cd qt/build
+cmake -DCMAKE_BUILD_TYPE=Debug ..
+cmake --build .
+gdb ./bin/svg-animator
+```
+
+### Qt Creator
+
+1. Abrir `CMakeLists.txt` en Qt Creator
+2. Seleccionar kit (Qt 5.x + Compiler)
+3. Configurar directorio de build
+4. Presionar Build & Run
+
 ## Dependencias
 
 - Qt 5.x (Core, Gui, Widgets, Svg, Xml)
 - CMake 3.16+
 - Estándar C++17
+
+## Plataformas
+
+### Windows
+- MinGW 8.1+ (recomendado)
+- MSVC 2017/2019/2022
+- Visual Studio con carga de componentes C++
+
+### macOS
+- Xcode Command Line Tools
+- Apple Clang o GCC
+
+### Linux
+- GCC 7+ o Clang 6+
+- Development headers de Qt5
+
+## Estructura de archivos
+
+```
+qt/
+├── CMakeLists.txt        # Configuración CMake
+├── build.bat             # Script build Windows
+├── build.sh              # Script build Mac/Linux
+├── run.bat               # Script run Windows
+├── run.sh                # Script run Mac/Linux
+└── src/                  # Código fuente
+    ├── main.cpp
+    ├── MainWindow.cpp/h
+    ├── SvgView.cpp/h
+    └── ... (otros módulos)
+```
+
+## Convenciones de código
+
+- Estándar C++17
+- Nombres en camelCase para variables y funciones
+- Prefijo `m_` para miembros de clase
+- Nombres en PascalCase para clases
+- Archivos `.h` para headers, `.cpp` para implementación
+- Usar `#pragma once` en headers
