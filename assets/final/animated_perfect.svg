@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg height="366" viewBox="0 0 366 366" width="366" xmlns="http://www.w3.org/2000/svg" style="transform: scale(1);"><style>@keyframes svgRotate { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+[data-anim-index="0"] { transform-origin: 182.99999618530273px 182.99999237060547px; transform-box: view-box;  animation: svgRotate 30s linear infinite normal; animation-delay: 0s; }
+[data-anim-index="1"] { transform-origin: 183px 183px; transform-box: view-box;  animation: svgRotate 27.5s linear infinite normal; animation-delay: 0s; }
+[data-anim-index="2"] { transform-origin: 183px 183px; transform-box: view-box;  animation: svgRotate 19.8s linear infinite reverse; animation-delay: 0s; }
+[data-anim-index="3"] { transform-origin: 183px 183px; transform-box: view-box;  animation: svgRotate 25.4s linear infinite reverse; animation-delay: 0s; }
+[data-anim-index="4"] { transform-origin: 183px 183px; transform-box: view-box;  animation: svgRotate 26.2s linear infinite normal; animation-delay: 0s; }
+[data-anim-index="5"] { transform-origin: 183.00000762939453px 183.00000762939453px; transform-box: view-box;  animation: svgRotate 27.9s linear infinite normal; animation-delay: 0s; }
+[data-anim-index="6"] { transform-origin: 183px 183px; transform-box: view-box;  animation: svgRotate 26.8s linear infinite normal; animation-delay: 0s; }
+[data-anim-index="7"] { transform-origin: 182.99999237060547px 183.00000762939453px; transform-box: view-box;  animation: svgRotate 16s linear infinite normal; animation-delay: 0s; }
+[data-anim-index="8"] { transform-origin: 183px 183px; transform-box: view-box;  animation: svgRotate 16s linear infinite normal; animation-delay: 0s; }
+[data-anim-index="9"] { transform-origin: 183px 183px; transform-box: view-box;  animation: svgRotate 16s linear infinite normal; animation-delay: 0s; }
+</style>
+  <!-- Blue outer (semi) -->
+  <path d="m18.997 106.524c-42.236 90.576-3.049 198.242 87.527 240.479 90.576 42.236 198.242 3.049 240.479-87.527 42.236-90.576 3.049-198.242-87.527-240.479-90.576-42.236-198.242-3.049-240.479 87.527z" fill="none" opacity=".191" stroke="#659cc8" stroke-dasharray="76 4 70" stroke-width="2" style="animation: 30s linear infinite svgRotate; transform-origin: 183px 183px 0px; transform-box: view-box;" class="" data-anim-index="0"/>
+  <!-- Blue outer -->
+  <circle cx="183" cy="183" fill="none" r="181" stroke="#659cc8" stroke-dasharray="2 45 161" stroke-width="2" style="animation: 27.5s linear infinite svgRotate; transform-origin: 183px 183px 0px; transform-box: view-box;" class="" data-anim-index="1"/>
+  <!-- Green outer -->
+  <circle cx="183" cy="183" fill="none" r="159" stroke="#78af9f" stroke-dasharray="76 4 70" stroke-width="4" style="animation: 19.8s linear infinite reverse svgRotate; transform-origin: 183px 183px 0px; transform-box: view-box;" class="" data-anim-index="2"/>
+  <!-- Green outer (semi) -->
+  <circle cx="183" cy="183" fill="none" opacity=".278" r="159" stroke="#78af9f" stroke-dasharray="46 2 12" stroke-width="4" style="animation: 25.4s linear infinite reverse svgRotate; transform-origin: 183px 183px 0px; transform-box: view-box;" class="" data-anim-index="3"/>
+  <!-- Yellow outer -->
+  <circle cx="183" cy="183" fill="none" r="150" stroke="#dda032" stroke-dasharray="76 2 40 180" stroke-width="8" style="animation: 26.2s linear infinite svgRotate; transform-origin: 183px 183px 0px; transform-box: view-box;" class="" data-anim-index="4"/>
+  <!-- Yellow outer (semi) -->
+  <path d="m92.733 302.788c66.157 49.854 160.202 36.636 210.055-29.52 49.854-66.158 36.636-160.203-29.52-210.056-66.158-49.854-160.203-36.636-210.056 29.52-49.854 66.158-36.636 160.203 29.52 210.056z" fill="none" opacity=".688" stroke="#dda032" stroke-dasharray="56 2 4" stroke-width="8" style="animation: 27.9s linear infinite svgRotate; transform-origin: 183px 183px 0px; transform-box: view-box;" class="" data-anim-index="5"/>
+  <!-- Orange outer -->
+  <circle cx="183" cy="183" fill="none" r="141" stroke="#d36e2d" stroke-dasharray="51 4 10 80" stroke-width="4" style="animation: 26.8s linear infinite svgRotate; transform-origin: 183px 183px 0px; transform-box: view-box;" class="element-selected" data-anim-index="6"/>
+  <!-- Orange outer (semi) -->
+  <path d="m251.346 306.299c68.096-37.746 92.7-123.549 54.953-191.645-37.746-68.096-123.549-92.7-191.645-54.953-68.096 37.746-92.7 123.549-54.953 191.645 37.746 68.096 123.549 92.7 191.645 54.953z" fill="none" opacity=".441" stroke="#d36e2d" stroke-dasharray="140 4 10 80" stroke-width="4" style="animation: 16s linear infinite svgRotate; transform-origin: 183px 183px 0px; transform-box: view-box;" data-anim-index="7"/>
+  <!-- Red inner -->
+  <circle cx="183" cy="183" fill="none" r="130" stroke="#c13f21" stroke-dasharray="35 7 10 80" stroke-width="2" style="animation: 16s linear infinite svgRotate; transform-origin: 183px 183px 0px; transform-box: view-box;" data-anim-index="8"/>
+  <!-- Red inner (semi) -->
+  <circle cx="183" cy="183" fill="none" opacity=".278" r="130" stroke="#c13f21" stroke-dasharray="35 7 10 80" stroke-width="2" style="animation: 16s linear infinite svgRotate; transform-origin: 183px 183px 0px; transform-box: view-box;" data-anim-index="9"/>
+</svg>

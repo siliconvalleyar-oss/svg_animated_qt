@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <!-- Cielo atardecer gradiente -->
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1a0533"/>
+      <stop offset="25%" stop-color="#4a1942"/>
+      <stop offset="50%" stop-color="#c84b31"/>
+      <stop offset="70%" stop-color="#ec994b"/>
+      <stop offset="85%" stop-color="#f4c430"/>
+      <stop offset="100%" stop-color="#ffe066"/>
+    </linearGradient>
+    <linearGradient id="lake" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ec994b" stop-opacity="0.6"/>
+      <stop offset="30%" stop-color="#c84b31" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#1a0533" stop-opacity="0.3"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff7ae"/>
+      <stop offset="40%" stop-color="#f4c430"/>
+      <stop offset="70%" stop-color="#ec994b"/>
+      <stop offset="100%" stop-color="#c84b31" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="mtn1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2d1b4e"/>
+      <stop offset="100%" stop-color="#1a0533"/>
+    </linearGradient>
+    <linearGradient id="mtn2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3d2a5c"/>
+      <stop offset="100%" stop-color="#2d1b4e"/>
+    </linearGradient>
+    <linearGradient id="mtn3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#5a3d6e"/>
+      <stop offset="100%" stop-color="#3d2a5c"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Cielo -->
+  <rect width="800" height="500" fill="url(#sky)"/>
+
+  <!-- Sol poniente -->
+  <circle cx="400" cy="310" r="70" fill="url(#sun)"/>
+  <circle cx="400" cy="310" r="45" fill="#fff7ae" opacity="0.9"/>
+
+  <!-- Reflejo del sol en el agua -->
+  <ellipse cx="400" cy="400" rx="60" ry="15" fill="#f4c430" opacity="0.4"/>
+  <ellipse cx="400" cy="420" rx="40" ry="8" fill="#f4c430" opacity="0.25"/>
+  <ellipse cx="400" cy="435" rx="25" ry="5" fill="#f4c430" opacity="0.15"/>
+
+  <!-- Montañas lejanas -->
+  <polygon points="0,320 120,180 250,320" fill="url(#mtn1)"/>
+  <polygon points="150,320 300,140 450,320" fill="url(#mtn1)"/>
+  <polygon points="350,320 500,160 650,320" fill="url(#mtn1)"/>
+  <polygon points="550,320 700,190 800,320" fill="url(#mtn1)"/>
+
+  <!-- Montañas medias -->
+  <polygon points="-50,340 100,230 250,340" fill="url(#mtn2)"/>
+  <polygon points="180,340 350,200 520,340" fill="url(#mtn2)"/>
+  <polygon points="420,340 600,220 780,340" fill="url(#mtn2)"/>
+
+  <!-- Montañas cercanas -->
+  <polygon points="-80,370 80,270 240,370" fill="url(#mtn3)"/>
+  <polygon points="200,370 400,250 600,370" fill="url(#mtn3)"/>
+  <polygon points="520,370 700,280 850,370" fill="url(#mtn3)"/>
+
+  <!-- Lago -->
+  <rect x="0" y="370" width="800" height="130" fill="url(#lake)"/>
+
+  <!-- Ondas del agua -->
+  <path d="M0,390 Q100,385 200,390 T400,390 T600,390 T800,390" fill="none" stroke="#ec994b" stroke-width="0.8" opacity="0.3"/>
+  <path d="M0,410 Q100,405 200,410 T400,410 T600,410 T800,410" fill="none" stroke="#ec994b" stroke-width="0.6" opacity="0.2"/>
+  <path d="M0,430 Q100,425 200,430 T400,430 T600,430 T800,430" fill="none" stroke="#ec994b" stroke-width="0.5" opacity="0.15"/>
+
+  <!-- Orilla del lago -->
+  <path d="M0,370 Q200,365 400,370 T800,370" fill="none" stroke="#5a3d6e" stroke-width="2" opacity="0.5"/>
+
+  <!-- Bosque minimalista - árboles izquierda -->
+  <!-- Árbol 1 -->
+  <polygon points="50,370 65,310 80,370" fill="#1a3a2a"/>
+  <polygon points="55,340 65,295 75,340" fill="#1a3a2a"/>
+  <rect x="62" y="370" width="6" height="12" fill="#3d2a1a"/>
+
+  <!-- Árbol 2 -->
+  <polygon points="90,370 108,300 126,370" fill="#1a3a2a"/>
+  <polygon points="96,335 108,280 120,335" fill="#1a3a2a"/>
+  <rect x="105" y="370" width="6" height="14" fill="#3d2a1a"/>
+
+  <!-- Árbol 3 -->
+  <polygon points="140,370 155,320 170,370" fill="#1a3a2a"/>
+  <polygon points="145,345 155,305 165,345" fill="#1a3a2a"/>
+  <rect x="152" y="370" width="6" height="10" fill="#3d2a1a"/>
+
+  <!-- Árbol 4 -->
+  <polygon points="180,370 200,290 220,370" fill="#1a3a2a"/>
+  <polygon points="188,330 200,270 212,330" fill="#1a3a2a"/>
+  <rect x="197" y="370" width="6" height="16" fill="#3d2a1a"/>
+
+  <!-- Árbol 5 -->
+  <polygon points="230,370 248,305 266,370" fill="#1a3a2a"/>
+  <polygon points="236,340 248,288 260,340" fill="#1a3a2a"/>
+  <rect x="245" y="370" width="6" height="12" fill="#3d2a1a"/>
+
+  <!-- Bosque minimalista - árboles derecha -->
+  <!-- Árbol 6 -->
+  <polygon points="540,370 558,305 576,370" fill="#1a3a2a"/>
+  <polygon points="546,340 558,290 570,340" fill="#1a3a2a"/>
+  <rect x="555" y="370" width="6" height="12" fill="#3d2a1a"/>
+
+  <!-- Árbol 7 -->
+  <polygon points="585,370 605,280 625,370" fill="#1a3a2a"/>
+  <polygon points="593,325 605,262 617,325" fill="#1a3a2a"/>
+  <rect x="602" y="370" width="6" height="16" fill="#3d2a1a"/>
+
+  <!-- Árbol 8 -->
+  <polygon points="640,370 655,315 670,370" fill="#1a3a2a"/>
+  <polygon points="645,342 655,300 665,342" fill="#1a3a2a"/>
+  <rect x="652" y="370" width="6" height="10" fill="#3d2a1a"/>
+
+  <!-- Árbol 9 -->
+  <polygon points="690,370 710,295 730,370" fill="#1a3a2a"/>
+  <polygon points="698,332 710,278 722,332" fill="#1a3a2a"/>
+  <rect x="707" y="370" width="6" height="14" fill="#3d2a1a"/>
+
+  <!-- Árbol 10 -->
+  <polygon points="745,370 760,325 775,370" fill="#1a3a2a"/>
+  <polygon points="750,348 760,310 770,348" fill="#1a3a2a"/>
+  <rect x="757" y="370" width="6" height="10" fill="#3d2a1a"/>
+
+  <!-- Pájaros distantes -->
+  <path d="M100,100 Q108,92 116,100" fill="none" stroke="#1a0533" stroke-width="1.5" opacity="0.5"/>
+  <path d="M130,110 Q138,102 146,110" fill="none" stroke="#1a0533" stroke-width="1.5" opacity="0.5"/>
+  <path d="M650,120 Q658,112 666,120" fill="none" stroke="#1a0533" stroke-width="1.5" opacity="0.5"/>
+</svg>

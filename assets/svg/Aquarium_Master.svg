@@ -1,0 +1,503 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="water_bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0B1D3A"/>
+      <stop offset="30%" stop-color="#0F2B5B"/>
+      <stop offset="60%" stop-color="#1A4B8C"/>
+      <stop offset="85%" stop-color="#2E86C1"/>
+      <stop offset="100%" stop-color="#5DADE2"/>
+    </linearGradient>
+    <!-- Sand gradient -->
+    <linearGradient id="sand" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F0E68C"/>
+      <stop offset="100%" stop-color="#D4AC6E"/>
+    </linearGradient>
+    <!-- Light rays -->
+    <linearGradient id="light_ray" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F9E79F" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#F9E79F" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Fish gradients -->
+    <linearGradient id="fish_orange" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F39C12"/>
+      <stop offset="100%" stop-color="#E67E22"/>
+    </linearGradient>
+    <linearGradient id="fish_blue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3498DB"/>
+      <stop offset="100%" stop-color="#2471A3"/>
+    </linearGradient>
+    <linearGradient id="fish_yellow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F9E79F"/>
+      <stop offset="100%" stop-color="#F4D03F"/>
+    </linearGradient>
+    <linearGradient id="fish_purple" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#D2B4DE"/>
+      <stop offset="100%" stop-color="#8E44AD"/>
+    </linearGradient>
+    <!-- Coral gradients -->
+    <linearGradient id="coral_red" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#922B21"/>
+      <stop offset="100%" stop-color="#F1948A"/>
+    </linearGradient>
+    <linearGradient id="coral_pink" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#E74C3C"/>
+      <stop offset="100%" stop-color="#F5B7B1"/>
+    </linearGradient>
+    <linearGradient id="coral_purple" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#6C3483"/>
+      <stop offset="100%" stop-color="#AF7AC5"/>
+    </linearGradient>
+    <!-- Plant gradients -->
+    <linearGradient id="plant_green" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#196F3D"/>
+      <stop offset="100%" stop-color="#52BE80"/>
+    </linearGradient>
+    <!-- Jellyfish gradient -->
+    <radialGradient id="jelly_bell" cx="50%" cy="40%">
+      <stop offset="0%" stop-color="#D2B4DE" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#8E44AD" stop-opacity="0.4"/>
+    </radialGradient>
+    <!-- Bubble gradient -->
+    <radialGradient id="bubble" cx="35%" cy="30%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#85C1E9" stop-opacity="0.2"/>
+    </radialGradient>
+    <!-- Eye gradient -->
+    <radialGradient id="eye" cx="40%" cy="35%">
+      <stop offset="0%" stop-color="#2C3E50"/>
+      <stop offset="100%" stop-color="#000"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ============================================ -->
+  <!-- BACKGROUND -->
+  <!-- ============================================ -->
+  <g id="Background">
+    <rect width="1200" height="800" fill="url(#water_bg)"/>
+    
+    <!-- Light rays from surface -->
+    <g id="LightRays" opacity="0.15">
+      <polygon points="200,0 280,400 160,400" fill="url(#light_ray)"/>
+      <polygon points="450,0 520,350 400,350" fill="url(#light_ray)"/>
+      <polygon points="700,0 770,380 650,380" fill="url(#light_ray)"/>
+      <polygon points="950,0 1020,360 900,360" fill="url(#light_ray)"/>
+      <polygon points="1100,0 1160,320 1060,320" fill="url(#light_ray)"/>
+    </g>
+    
+    <!-- Water surface ripples -->
+    <g id="Surface" opacity="0.3">
+      <path d="M0,20 Q100,15 200,20 T400,20 T600,20 T800,20 T1000,20 T1200,20" 
+            fill="none" stroke="#AED6F1" stroke-width="2"/>
+      <path d="M0,35 Q100,30 200,35 T400,35 T600,35 T800,35 T1000,35 T1200,35" 
+            fill="none" stroke="#AED6F1" stroke-width="1.5"/>
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- SANDY BOTTOM -->
+  <!-- ============================================ -->
+  <g id="SandyBottom">
+    <path d="M0,700 Q200,690 400,695 Q600,700 800,692 Q1000,688 1200,695 L1200,800 L0,800 Z" 
+          fill="url(#sand)"/>
+    <!-- Sand texture -->
+    <circle cx="100" cy="750" r="2" fill="#D4AC6E" opacity="0.4"/>
+    <circle cx="250" cy="740" r="1.5" fill="#D4AC6E" opacity="0.3"/>
+    <circle cx="400" cy="745" r="2" fill="#D4AC6E" opacity="0.4"/>
+    <circle cx="550" cy="738" r="1.5" fill="#D4AC6E" opacity="0.3"/>
+    <circle cx="700" cy="742" r="2" fill="#D4AC6E" opacity="0.4"/>
+    <circle cx="850" cy="736" r="1.5" fill="#D4AC6E" opacity="0.3"/>
+    <circle cx="1000" cy="740" r="2" fill="#D4AC6E" opacity="0.4"/>
+    <circle cx="1100" cy="748" r="1.5" fill="#D4AC6E" opacity="0.3"/>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- ROCKS -->
+  <!-- ============================================ -->
+  <g id="Rocks">
+    <!-- Rock 1 (large, left) -->
+    <g id="Rock_01" transform="translate(50, 620)">
+      <path d="M0,80 Q-5,50 15,30 Q35,10 65,5 Q95,2 120,10 Q145,22 155,42 Q160,65 155,80 Q140,90 110,95 Q80,98 50,95 Q20,90 0,80 Z" 
+            fill="#2C3E50" stroke="#1a1a2e" stroke-width="1"/>
+      <path d="M20,35 Q45,18 75,12 Q55,28 30,45 Z" fill="#5D6D7E" opacity="0.4"/>
+    </g>
+    
+    <!-- Rock 2 (medium, center-right) -->
+    <g id="Rock_02" transform="translate(800, 640)">
+      <path d="M0,60 Q5,35 25,20 Q50,8 80,5 Q110,8 130,22 Q145,38 142,58 Q135,72 110,78 Q80,82 50,78 Q20,72 0,60 Z" 
+            fill="#5D6D7E" stroke="#2C3E50" stroke-width="1"/>
+      <path d="M25,25 Q50,12 80,8 Q60,22 35,38 Z" fill="#95A5A6" opacity="0.3"/>
+    </g>
+    
+    <!-- Rock 3 (small, right) -->
+    <g id="Rock_03" transform="translate(1050, 660)">
+      <path d="M0,40 Q5,22 20,12 Q40,5 60,5 Q80,8 92,18 Q100,30 95,42 Q85,52 65,55 Q40,55 20,50 Q5,45 0,40 Z" 
+            fill="#2C3E50" stroke="#1a1a2e" stroke-width="1"/>
+      <path d="M15,18 Q35,8 60,5 Q42,16 22,28 Z" fill="#5D6D7E" opacity="0.35"/>
+    </g>
+    
+    <!-- Rock 4 (small pebbles) -->
+    <g id="Rock_04" transform="translate(350, 680)">
+      <ellipse cx="15" cy="12" rx="15" ry="10" fill="#5D6D7E"/>
+      <ellipse cx="40" cy="10" rx="10" ry="7" fill="#2C3E50"/>
+      <ellipse cx="25" cy="15" rx="8" ry="5" fill="#95A5A6" opacity="0.6"/>
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- CORALS -->
+  <!-- ============================================ -->
+  <g id="Corals">
+    <!-- Coral 1 (red staghorn, left) -->
+    <g id="Coral_Red_01" transform="translate(120, 640)">
+      <path d="M40,60 Q38,40 35,25 Q32,12 35,5 Q38,2 42,5 Q45,12 42,25 Q40,40 42,60" 
+            fill="url(#coral_red)" stroke="#922B21" stroke-width="0.8"/>
+      <circle cx="35" cy="5" r="4" fill="#F1948A"/>
+      <path d="M25,58 Q18,42 15,28 Q12,16 15,10 Q18,8 22,10 Q25,16 22,28 Q20,42 22,58" 
+            fill="url(#coral_red)" stroke="#922B21" stroke-width="0.8"/>
+      <circle cx="15" cy="10" r="3.5" fill="#F1948A"/>
+      <path d="M55,58 Q62,42 65,28 Q68,16 65,10 Q62,8 58,10 Q55,16 58,28 Q60,42 58,58" 
+            fill="url(#coral_red)" stroke="#922B21" stroke-width="0.8"/>
+      <circle cx="65" cy="10" r="3.5" fill="#F1948A"/>
+      <path d="M10,56 Q5,42 2,30 Q0,22 3,18 Q6,16 8,20 Q10,28 8,40 Q8,48 10,56" 
+            fill="url(#coral_pink)" stroke="#C0392B" stroke-width="0.6"/>
+      <path d="M70,56 Q75,42 78,30 Q80,22 77,18 Q74,16 72,20 Q70,28 72,40 Q72,48 70,56" 
+            fill="url(#coral_pink)" stroke="#C0392B" stroke-width="0.6"/>
+    </g>
+    
+    <!-- Coral 2 (brain coral, center) -->
+    <g id="Coral_Brain_01" transform="translate(500, 660)">
+      <ellipse cx="60" cy="35" rx="55" ry="30" fill="#E8A87C" stroke="#D4AC6E" stroke-width="1"/>
+      <!-- Brain pattern -->
+      <path d="M25,25 Q40,18 60,15 Q80,18 95,25" fill="none" stroke="#D4AC6E" stroke-width="1.5" opacity="0.5"/>
+      <path d="M20,35 Q40,28 60,25 Q80,28 100,35" fill="none" stroke="#D4AC6E" stroke-width="1.5" opacity="0.5"/>
+      <path d="M22,45 Q42,38 60,35 Q78,38 98,45" fill="none" stroke="#D4AC6E" stroke-width="1.5" opacity="0.5"/>
+      <path d="M28,55 Q45,48 60,45 Q75,48 92,55" fill="none" stroke="#D4AC6E" stroke-width="1.5" opacity="0.5"/>
+    </g>
+    
+    <!-- Coral 3 (purple, right) -->
+    <g id="Coral_Purple_01" transform="translate(900, 650)">
+      <path d="M30,50 Q28,30 25,15 Q22,5 25,0 Q28,-2 32,0 Q35,5 32,15 Q30,30 32,50" 
+            fill="url(#coral_purple)" stroke="#6C3483" stroke-width="0.8"/>
+      <circle cx="25" cy="0" r="3.5" fill="#D2B4DE"/>
+      <path d="M50,48 Q48,28 45,15 Q42,5 45,0 Q48,-2 52,0 Q55,5 52,15 Q50,28 52,48" 
+            fill="url(#coral_purple)" stroke="#6C3483" stroke-width="0.8"/>
+      <circle cx="45" cy="0" r="3" fill="#D2B4DE"/>
+      <path d="M15,50 Q12,35 10,22 Q8,12 10,8 Q12,6 15,8 Q18,12 15,22 Q14,35 15,50" 
+            fill="url(#coral_purple)" stroke="#6C3483" stroke-width="0.7"/>
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- PLANTS -->
+  <!-- ============================================ -->
+  <g id="Plants">
+    <!-- Seaweed 1 (tall, left) -->
+    <g id="Plant_Seaweed_01" transform="translate(200, 580)">
+      <path d="M25,120 Q23,90 20,60 Q18,35 22,15 Q26,5 30,0 Q34,5 38,15 Q42,35 40,60 Q37,90 35,120" 
+            fill="url(#plant_green)" stroke="#196F3D" stroke-width="1"/>
+      <!-- Leaves -->
+      <path d="M28,85 Q45,78 58,68 Q55,65 45,72 Q35,80 28,85 Z" fill="#52BE80" opacity="0.8"/>
+      <path d="M22,65 Q8,58 -2,48 Q0,45 10,52 Q20,60 22,65 Z" fill="#52BE80" opacity="0.8"/>
+      <path d="M30,45 Q45,38 55,30 Q52,27 42,34 Q32,42 30,45 Z" fill="#82E0AA" opacity="0.7"/>
+      <path d="M20,30 Q8,22 0,15 Q2,12 12,20 Q22,28 20,30 Z" fill="#82E0AA" opacity="0.7"/>
+    </g>
+    
+    <!-- Seaweed 2 (medium, center) -->
+    <g id="Plant_Seaweed_02" transform="translate(650, 600)">
+      <path d="M20,100 Q18,75 16,50 Q14,30 18,15 Q22,5 26,0 Q30,5 34,15 Q38,30 36,50 Q34,75 32,100" 
+            fill="url(#plant_green)" stroke="#196F3D" stroke-width="1"/>
+      <path d="M24,70 Q38,62 48,52 Q45,49 36,56 Q26,65 24,70 Z" fill="#52BE80" opacity="0.8"/>
+      <path d="M18,48 Q6,40 0,32 Q2,29 12,36 Q22,45 18,48 Z" fill="#52BE80" opacity="0.8"/>
+      <path d="M26,28 Q38,20 45,14 Q42,11 34,18 Q26,25 26,28 Z" fill="#82E0AA" opacity="0.7"/>
+    </g>
+    
+    <!-- Seaweed 3 (short, right) -->
+    <g id="Plant_Seaweed_03" transform="translate(1000, 630)">
+      <path d="M18,70 Q16,50 15,32 Q14,18 17,8 Q20,2 24,0 Q28,2 31,8 Q34,18 33,32 Q32,50 30,70" 
+            fill="url(#plant_green)" stroke="#196F3D" stroke-width="1"/>
+      <path d="M22,45 Q35,38 42,30 Q40,27 32,34 Q24,42 22,45 Z" fill="#52BE80" opacity="0.8"/>
+      <path d="M17,30 Q7,22 2,15 Q4,12 12,20 Q20,28 17,30 Z" fill="#52BE80" opacity="0.8"/>
+    </g>
+    
+    <!-- Long grass patches -->
+    <g id="Plant_Grass_01" transform="translate(320, 680)">
+      <path d="M0,20 Q5,5 8,0" fill="none" stroke="#27AE60" stroke-width="2" opacity="0.7"/>
+      <path d="M10,22 Q14,8 16,0" fill="none" stroke="#27AE60" stroke-width="2" opacity="0.7"/>
+      <path d="M20,21 Q22,6 20,0" fill="none" stroke="#27AE60" stroke-width="2" opacity="0.7"/>
+      <path d="M30,22 Q28,8 30,0" fill="none" stroke="#27AE60" stroke-width="2" opacity="0.7"/>
+      <path d="M40,20 Q35,5 38,0" fill="none" stroke="#27AE60" stroke-width="2" opacity="0.7"/>
+    </g>
+    
+    <g id="Plant_Grass_02" transform="translate(750, 685)">
+      <path d="M0,15 Q4,4 6,0" fill="none" stroke="#27AE60" stroke-width="1.5" opacity="0.6"/>
+      <path d="M8,16 Q11,5 12,0" fill="none" stroke="#27AE60" stroke-width="1.5" opacity="0.6"/>
+      <path d="M16,15 Q18,4 16,0" fill="none" stroke="#27AE60" stroke-width="1.5" opacity="0.6"/>
+      <path d="M24,16 Q22,5 24,0" fill="none" stroke="#27AE60" stroke-width="1.5" opacity="0.6"/>
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- FISH -->
+  <!-- ============================================ -->
+  <g id="Fish">
+    <!-- Clownfish 1 -->
+    <g id="Fish_Clownfish_01" transform="translate(180, 300) scale(0.9)">
+      <path d="M0,30 Q0,10 30,5 Q60,0 90,5 Q105,10 108,20 L105,30 L108,40 Q105,50 90,55 Q60,60 30,55 Q0,50 0,30 Z" 
+            fill="url(#fish_orange)" stroke="#D35400" stroke-width="1"/>
+      <!-- Stripes -->
+      <path d="M25,8 Q22,30 25,52" fill="none" stroke="white" stroke-width="5" opacity="0.9"/>
+      <path d="M55,5 Q52,30 55,55" fill="none" stroke="white" stroke-width="5" opacity="0.9"/>
+      <path d="M82,8 Q79,30 82,52" fill="none" stroke="white" stroke-width="4" opacity="0.9"/>
+      <!-- Eye -->
+      <circle cx="18" cy="28" r="5" fill="white"/>
+      <circle cx="19" cy="29" r="3" fill="url(#eye)"/>
+      <circle cx="20" cy="30" r="1.5" fill="#000"/>
+      <circle cx="17" cy="27" r="1.2" fill="white" opacity="0.8"/>
+      <!-- Tail -->
+      <path d="M105,15 Q125,5 135,0 Q128,20 138,30 Q128,40 135,60 Q125,55 105,45 Z" 
+            fill="#F39C12" stroke="#D35400" stroke-width="0.8"/>
+      <!-- Fins -->
+      <path d="M40,5 Q55,-10 70,-12 Q65,-5 50,5 Z" fill="#E67E22" stroke="#D35400" stroke-width="0.5"/>
+      <path d="M60,55 Q70,68 85,70 Q80,62 65,55 Z" fill="#E67E22" stroke="#D35400" stroke-width="0.5"/>
+      <!-- Mouth -->
+      <path d="M5,30 Q2,28 0,25" fill="none" stroke="#C0392B" stroke-width="1.5"/>
+      <path d="M5,32 Q2,34 0,37" fill="none" stroke="#C0392B" stroke-width="1.5"/>
+    </g>
+    
+    <!-- Blue Tang -->
+    <g id="Fish_BlueTang_01" transform="translate(500, 250) scale(0.85)">
+      <path d="M0,35 Q0,12 35,5 Q70,0 105,8 Q120,15 125,25 L120,35 L125,45 Q120,55 105,62 Q70,70 35,65 Q0,58 0,35 Z" 
+            fill="url(#fish_blue)" stroke="#1A5276" stroke-width="1"/>
+      <!-- Black marking -->
+      <path d="M70,0 Q90,5 108,18 Q120,30 118,45 Q112,58 95,65 Q80,68 68,62 Q60,55 65,42 Q72,25 70,0 Z" 
+            fill="#1a1a2e" opacity="0.85"/>
+      <!-- Yellow tail -->
+      <path d="M120,18 Q140,8 150,2 Q142,22 155,35 Q142,48 150,68 Q140,62 120,52 Z" 
+            fill="#F4D03F" stroke="#D4AC6E" stroke-width="0.8"/>
+      <!-- Eye -->
+      <circle cx="20" cy="32" r="5" fill="white"/>
+      <circle cx="21" cy="33" r="3" fill="url(#eye)"/>
+      <circle cx="22" cy="34" r="1.5" fill="#000"/>
+      <circle cx="19" cy="31" r="1.2" fill="white" opacity="0.8"/>
+      <circle cx="20" cy="32" r="5" fill="none" stroke="#F4D03F" stroke-width="1"/>
+      <!-- Fins -->
+      <path d="M35,5 Q55,-8 75,-10 Q70,-2 50,8 Z" fill="#3498DB" stroke="#1A5276" stroke-width="0.5"/>
+      <path d="M70,62 Q85,72 100,74 Q95,66 75,60 Z" fill="#3498DB" stroke="#1A5276" stroke-width="0.5"/>
+      <!-- Mouth -->
+      <path d="M5,35 Q2,32 0,28" fill="none" stroke="#1A5276" stroke-width="1.5"/>
+    </g>
+    
+    <!-- Yellow Tang -->
+    <g id="Fish_YellowTang_01" transform="translate(800, 350) scale(0.8)">
+      <path d="M0,35 Q0,12 35,5 Q70,0 100,8 Q115,15 118,25 L115,35 L118,45 Q115,55 100,62 Q70,70 35,65 Q0,58 0,35 Z" 
+            fill="url(#fish_yellow)" stroke="#D4AC6E" stroke-width="1"/>
+      <!-- Tail -->
+      <path d="M115,18 Q132,8 142,2 Q135,22 145,35 Q135,48 142,68 Q132,62 115,52 Z" 
+            fill="#F4D03F" stroke="#D4AC6E" stroke-width="0.8"/>
+      <ellipse cx="120" cy="35" rx="4" ry="8" fill="white" opacity="0.3"/>
+      <!-- Eye -->
+      <circle cx="18" cy="32" r="5" fill="white"/>
+      <circle cx="19" cy="33" r="3" fill="url(#eye)"/>
+      <circle cx="20" cy="34" r="1.5" fill="#000"/>
+      <circle cx="17" cy="31" r="1.2" fill="white" opacity="0.8"/>
+      <!-- Blue edges -->
+      <path d="M35,5 Q55,-5 75,-8 Q70,0 50,8 Z" fill="#3498DB" opacity="0.5" stroke="#1A5276" stroke-width="0.5"/>
+      <path d="M65,62 Q80,72 95,74 Q90,66 70,60 Z" fill="#3498DB" opacity="0.5" stroke="#1A5276" stroke-width="0.5"/>
+      <!-- Spine -->
+      <line x1="118" y1="35" x2="128" y2="35" stroke="#8B4513" stroke-width="1.5"/>
+      <circle cx="128" cy="35" r="1.5" fill="#8B4513"/>
+      <!-- Mouth -->
+      <path d="M5,35 Q2,32 0,28" fill="none" stroke="#D4AC6E" stroke-width="1.5"/>
+    </g>
+    
+    <!-- Angelfish -->
+    <g id="Fish_Angelfish_01" transform="translate(350, 400) scale(0.75)">
+      <path d="M0,50 Q0,15 40,5 Q75,-2 105,10 Q118,20 120,35 L118,50 L120,65 Q118,80 105,90 Q75,102 40,95 Q0,85 0,50 Z" 
+            fill="url(#fish_yellow)" stroke="#D35400" stroke-width="1"/>
+      <!-- Stripes -->
+      <path d="M30,8 Q25,50 30,92" fill="none" stroke="#1a1a2e" stroke-width="6" opacity="0.85"/>
+      <path d="M60,2 Q55,50 60,98" fill="none" stroke="#1a1a2e" stroke-width="6" opacity="0.85"/>
+      <path d="M88,8 Q83,50 88,92" fill="none" stroke="#1a1a2e" stroke-width="5" opacity="0.85"/>
+      <!-- Tall dorsal -->
+      <path d="M35,8 Q50,-25 70,-35 Q80,-32 85,-20 Q90,-5 95,10 Q75,0 55,2 Q40,4 35,8 Z" 
+            fill="#F39C12" stroke="#D35400" stroke-width="0.8"/>
+      <!-- Tall anal -->
+      <path d="M55,95 Q65,125 80,132 Q90,130 95,118 Q100,100 105,90 Q85,100 65,100 Q58,98 55,95 Z" 
+            fill="#F39C12" stroke="#D35400" stroke-width="0.8"/>
+      <!-- Tail -->
+      <path d="M118,25 Q138,15 148,8 Q140,35 152,50 Q140,65 148,92 Q138,85 118,75 Z" 
+            fill="#F39C12" stroke="#D35400" stroke-width="0.8"/>
+      <!-- Eye -->
+      <circle cx="18" cy="48" r="5" fill="white"/>
+      <circle cx="19" cy="49" r="3" fill="url(#eye)"/>
+      <circle cx="20" cy="50" r="1.5" fill="#000"/>
+      <circle cx="17" cy="47" r="1.2" fill="white" opacity="0.8"/>
+      <!-- Mouth -->
+      <path d="M5,50 Q2,47 0,42" fill="none" stroke="#D35400" stroke-width="1.5"/>
+    </g>
+    
+    <!-- Small fish school (background) -->
+    <g id="Fish_School" opacity="0.5">
+      <g transform="translate(950, 180) scale(0.4)">
+        <path d="M0,15 Q0,5 15,2 Q30,0 42,5 Q48,8 50,12 L48,15 L50,18 Q48,22 42,25 Q30,28 15,25 Q0,22 0,15 Z" fill="#5DADE2"/>
+        <path d="M48,8 Q58,4 62,2 Q58,12 65,15 Q58,18 62,28 Q58,26 48,22 Z" fill="#85C1E9"/>
+        <circle cx="8" cy="14" r="2" fill="white"/>
+        <circle cx="8.5" cy="14.5" r="1.2" fill="#000"/>
+      </g>
+      <g transform="translate(980, 200) scale(0.35)">
+        <path d="M0,15 Q0,5 15,2 Q30,0 42,5 Q48,8 50,12 L48,15 L50,18 Q48,22 42,25 Q30,28 15,25 Q0,22 0,15 Z" fill="#5DADE2"/>
+        <path d="M48,8 Q58,4 62,2 Q58,12 65,15 Q58,18 62,28 Q58,26 48,22 Z" fill="#85C1E9"/>
+        <circle cx="8" cy="14" r="2" fill="white"/>
+        <circle cx="8.5" cy="14.5" r="1.2" fill="#000"/>
+      </g>
+      <g transform="translate(960, 220) scale(0.38)">
+        <path d="M0,15 Q0,5 15,2 Q30,0 42,5 Q48,8 50,12 L48,15 L50,18 Q48,22 42,25 Q30,28 15,25 Q0,22 0,15 Z" fill="#82E0AA"/>
+        <path d="M48,8 Q58,4 62,2 Q58,12 65,15 Q58,18 62,28 Q58,26 48,22 Z" fill="#ABEBC6"/>
+        <circle cx="8" cy="14" r="2" fill="white"/>
+        <circle cx="8.5" cy="14.5" r="1.2" fill="#000"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- SEAHORSE -->
+  <!-- ============================================ -->
+  <g id="Seahorse_01" transform="translate(680, 380) scale(0.6)">
+    <!-- Tail -->
+    <path d="M42,160 Q55,175 58,192 Q56,208 48,215 Q38,218 34,210 Q32,198 38,190 Q44,188 46,196 Q44,205 38,208" 
+          fill="none" stroke="#F39C12" stroke-width="5" stroke-linecap="round"/>
+    <!-- Body -->
+    <path d="M30,80 Q20,100 18,130 Q16,155 22,175 Q32,192 48,198 Q62,200 68,188 Q72,170 70,148 Q68,125 65,108 Q60,92 50,82 Z" 
+          fill="#F39C12" stroke="#D4AC6E" stroke-width="1"/>
+    <!-- Body ridges -->
+    <path d="M28,100 Q48,95 68,100" fill="none" stroke="#D4AC6E" stroke-width="0.8" opacity="0.4"/>
+    <path d="M22,125 Q48,120 70,125" fill="none" stroke="#D4AC6E" stroke-width="0.8" opacity="0.4"/>
+    <path d="M20,150 Q48,145 70,150" fill="none" stroke="#D4AC6E" stroke-width="0.8" opacity="0.4"/>
+    <path d="M22,175 Q48,170 68,175" fill="none" stroke="#D4AC6E" stroke-width="0.8" opacity="0.4"/>
+    <!-- Head -->
+    <path d="M25,50 Q15,58 10,72 Q8,85 12,95 Q20,102 35,98 Q48,92 55,80 Q58,68 55,55 Q50,45 40,42 Q30,40 25,50 Z" 
+          fill="#F39C12" stroke="#D4AC6E" stroke-width="1"/>
+    <!-- Snout -->
+    <path d="M10,72 Q-5,68 -15,70 Q-18,73 -15,76 Q-5,78 10,78 Z" 
+          fill="#F39C12" stroke="#D4AC6E" stroke-width="0.8"/>
+    <circle cx="-14" cy="72" r="2" fill="#E67E22"/>
+    <!-- Crown -->
+    <path d="M35,42 Q38,25 45,18 Q48,22 46,35 Q44,42 40,44" 
+          fill="#F39C12" stroke="#D4AC6E" stroke-width="0.8"/>
+    <circle cx="45" cy="18" r="2" fill="#F4D03F"/>
+    <!-- Eye -->
+    <circle cx="28" cy="68" r="5" fill="white"/>
+    <circle cx="29" cy="69" r="3.5" fill="#1a1a1a"/>
+    <circle cx="30" cy="70" r="1.8" fill="#000"/>
+    <circle cx="27" cy="67" r="1.2" fill="white" opacity="0.8"/>
+    <!-- Dorsal fin -->
+    <path d="M58,90 Q72,82 78,78 Q75,92 72,108 Q68,120 65,128 Q65,110 62,95 Z" 
+          fill="#F9E79F" stroke="#D4AC6E" stroke-width="0.5" opacity="0.7"/>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- JELLYFISH -->
+  <!-- ============================================ -->
+  <g id="Jellyfish_01" transform="translate(900, 120) scale(0.7)">
+    <!-- Bell -->
+    <path d="M0,70 Q0,30 25,12 Q50,2 75,2 Q100,2 125,12 Q150,30 150,70 Q130,80 110,82 Q90,84 75,84 Q60,84 40,82 Q20,80 0,70 Z" 
+          fill="url(#jelly_bell)" stroke="#8E44AD" stroke-width="1" opacity="0.8"/>
+    <!-- Inner glow -->
+    <path d="M15,65 Q15,35 40,20 Q60,12 75,10 Q90,12 110,20 Q135,35 135,65 Q120,72 100,74 Q80,75 60,74 Q40,72 15,65 Z" 
+          fill="#D2B4DE" opacity="0.3"/>
+    <!-- Highlight -->
+    <path d="M25,25 Q45,12 70,8 Q50,20 30,38 Z" fill="white" opacity="0.3"/>
+    <!-- Tentacles -->
+    <path d="M20,82 Q15,110 12,140 Q10,165 14,185" fill="none" stroke="#AF7AC5" stroke-width="1.5" opacity="0.6"/>
+    <path d="M40,84 Q35,115 32,148 Q30,175 34,198" fill="none" stroke="#AF7AC5" stroke-width="1.5" opacity="0.6"/>
+    <path d="M60,85 Q58,118 56,152 Q54,180 58,205" fill="none" stroke="#AF7AC5" stroke-width="1.5" opacity="0.6"/>
+    <path d="M80,85 Q82,118 84,152 Q86,180 82,205" fill="none" stroke="#AF7AC5" stroke-width="1.5" opacity="0.6"/>
+    <path d="M100,84 Q105,115 108,148 Q110,175 106,198" fill="none" stroke="#AF7AC5" stroke-width="1.5" opacity="0.6"/>
+    <path d="M120,82 Q125,110 128,140 Q130,165 126,185" fill="none" stroke="#AF7AC5" stroke-width="1.5" opacity="0.6"/>
+    <!-- Oral arms -->
+    <path d="M55,84 Q50,120 48,155 Q46,185 50,210" fill="none" stroke="#D2B4DE" stroke-width="3" opacity="0.5"/>
+    <path d="M75,85 Q73,122 72,160 Q71,192 74,218" fill="none" stroke="#D2B4DE" stroke-width="3" opacity="0.5"/>
+    <path d="M95,84 Q98,120 100,155 Q102,185 98,210" fill="none" stroke="#D2B4DE" stroke-width="3" opacity="0.5"/>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- CRAB -->
+  <!-- ============================================ -->
+  <g id="Crab_01" transform="translate(420, 680) scale(0.65)">
+    <!-- Legs -->
+    <path d="M-20,30 Q-45,35 -65,42 Q-78,48 -85,45 Q-82,40 -70,35 Q-50,28 -20,25" fill="none" stroke="#C0392B" stroke-width="4" stroke-linecap="round"/>
+    <path d="M-18,38 Q-42,48 -62,60 Q-75,70 -82,72 Q-80,68 -68,58 Q-48,45 -18,35" fill="none" stroke="#C0392B" stroke-width="4" stroke-linecap="round"/>
+    <path d="M-15,45 Q-38,58 -55,72 Q-65,82 -70,85 Q-68,82 -58,72 Q-40,58 -15,42" fill="none" stroke="#C0392B" stroke-width="4" stroke-linecap="round"/>
+    <path d="M80,30 Q105,35 125,42 Q138,48 145,45 Q142,40 130,35 Q110,28 80,25" fill="none" stroke="#C0392B" stroke-width="4" stroke-linecap="round"/>
+    <path d="M78,38 Q102,48 122,60 Q135,70 142,72 Q140,68 128,58 Q108,45 78,35" fill="none" stroke="#C0392B" stroke-width="4" stroke-linecap="round"/>
+    <path d="M75,45 Q98,58 115,72 Q125,82 130,85 Q128,82 118,72 Q100,58 75,42" fill="none" stroke="#C0392B" stroke-width="4" stroke-linecap="round"/>
+    <!-- Arms -->
+    <path d="M-15,15 Q-35,5 -50,-2 Q-60,-5 -65,-5" fill="none" stroke="#E74C3C" stroke-width="6" stroke-linecap="round"/>
+    <path d="M75,15 Q95,5 110,-2 Q120,-5 125,-5" fill="none" stroke="#E74C3C" stroke-width="6" stroke-linecap="round"/>
+    <!-- Claws -->
+    <path d="M-65,-5 Q-80,-15 -90,-25 Q-95,-30 -92,-32 Q-88,-28 -78,-18 Q-68,-10 -65,-5 Z" fill="#E74C3C" stroke="#922B21" stroke-width="1"/>
+    <path d="M-65,-5 Q-78,5 -88,15 Q-92,22 -88,25 Q-84,22 -75,12 Q-66,2 -65,-5 Z" fill="#E74C3C" stroke="#922B21" stroke-width="1"/>
+    <path d="M125,-5 Q140,-15 150,-25 Q155,-30 152,-32 Q148,-28 138,-18 Q128,-10 125,-5 Z" fill="#E74C3C" stroke="#922B21" stroke-width="1"/>
+    <path d="M125,-5 Q138,5 148,15 Q152,22 148,25 Q144,22 135,12 Q126,2 125,-5 Z" fill="#E74C3C" stroke="#922B21" stroke-width="1"/>
+    <!-- Shell -->
+    <path d="M0,20 Q-5,0 15,-12 Q40,-22 65,-22 Q90,-22 105,-12 Q120,0 115,20 Q105,32 85,38 Q55,42 30,38 Q10,32 0,20 Z" 
+          fill="#E74C3C" stroke="#922B21" stroke-width="1"/>
+    <path d="M15,-8 Q40,-18 65,-18 Q50,-8 28,5 Z" fill="#F5B7B1" opacity="0.3"/>
+    <!-- Eye stalks -->
+    <path d="M30,-15 Q28,-30 25,-40 Q24,-45 27,-47" fill="none" stroke="#C0392B" stroke-width="3" stroke-linecap="round"/>
+    <path d="M80,-15 Q82,-30 85,-40 Q86,-45 83,-47" fill="none" stroke="#C0392B" stroke-width="3" stroke-linecap="round"/>
+    <!-- Eyes -->
+    <circle cx="27" cy="-50" r="5" fill="white"/>
+    <circle cx="28" cy="-49" r="3" fill="#1a1a1a"/>
+    <circle cx="83" cy="-50" r="5" fill="white"/>
+    <circle cx="82" cy="-49" r="3" fill="#1a1a1a"/>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- BUBBLES -->
+  <!-- ============================================ -->
+  <g id="Bubbles">
+    <g id="Bubble_Group_01" transform="translate(150, 200)">
+      <circle cx="0" cy="0" r="8" fill="url(#bubble)" stroke="#85C1E9" stroke-width="0.5" opacity="0.8"/>
+      <circle cx="-2" cy="-2" r="2.2" fill="white" opacity="0.8"/>
+      <circle cx="25" cy="15" r="5" fill="url(#bubble)" stroke="#85C1E9" stroke-width="0.4" opacity="0.7"/>
+      <circle cx="24" cy="13" r="1.5" fill="white" opacity="0.7"/>
+      <circle cx="10" cy="30" r="3.5" fill="url(#bubble)" stroke="#85C1E9" stroke-width="0.3" opacity="0.6"/>
+      <circle cx="-8" cy="40" r="2.5" fill="url(#bubble)" stroke="#85C1E9" stroke-width="0.3" opacity="0.5"/>
+      <circle cx="18" cy="48" r="2" fill="url(#bubble)" stroke="#85C1E9" stroke-width="0.3" opacity="0.45"/>
+    </g>
+    <g id="Bubble_Group_02" transform="translate(750, 150)">
+      <circle cx="0" cy="0" r="6" fill="url(#bubble)" stroke="#85C1E9" stroke-width="0.4" opacity="0.75"/>
+      <circle cx="-1.5" cy="-1.5" r="1.8" fill="white" opacity="0.75"/>
+      <circle cx="18" cy="12" r="4" fill="url(#bubble)" stroke="#85C1E9" stroke-width="0.3" opacity="0.65"/>
+      <circle cx="8" cy="25" r="3" fill="url(#bubble)" stroke="#85C1E9" stroke-width="0.3" opacity="0.55"/>
+      <circle cx="-5" cy="32" r="2" fill="url(#bubble)" stroke="#85C1E9" stroke-width="0.3" opacity="0.45"/>
+    </g>
+    <g id="Bubble_Group_03" transform="translate(1050, 180)">
+      <circle cx="0" cy="0" r="5" fill="url(#bubble)" stroke="#85C1E9" stroke-width="0.4" opacity="0.7"/>
+      <circle cx="-1" cy="-1" r="1.5" fill="white" opacity="0.7"/>
+      <circle cx="12" cy="10" r="3.5" fill="url(#bubble)" stroke="#85C1E9" stroke-width="0.3" opacity="0.6"/>
+      <circle cx="5" cy="22" r="2.5" fill="url(#bubble)" stroke="#85C1E9" stroke-width="0.3" opacity="0.5"/>
+    </g>
+    <!-- Scattered single bubbles -->
+    <circle cx="300" cy="180" r="4" fill="url(#bubble)" stroke="#85C1E9" stroke-width="0.3" opacity="0.6"/>
+    <circle cx="580" cy="120" r="3" fill="url(#bubble)" stroke="#85C1E9" stroke-width="0.3" opacity="0.55"/>
+    <circle cx="450" cy="280" r="3.5" fill="url(#bubble)" stroke="#85C1E9" stroke-width="0.3" opacity="0.5"/>
+    <circle cx="1100" cy="250" r="2.5" fill="url(#bubble)" stroke="#85C1E9" stroke-width="0.3" opacity="0.45"/>
+    <circle cx="80" cy="350" r="3" fill="url(#bubble)" stroke="#85C1E9" stroke-width="0.3" opacity="0.5"/>
+    <circle cx="620" cy="300" r="2" fill="url(#bubble)" stroke="#85C1E9" stroke-width="0.3" opacity="0.4"/>
+  </g>
+
+  <!-- ============================================ -->
+  <!-- FOREGROUND EFFECTS -->
+  <!-- ============================================ -->
+  <g id="Foreground" opacity="0.15">
+    <!-- Subtle foreground bubbles -->
+    <circle cx="100" cy="600" r="15" fill="url(#bubble)" stroke="#85C1E9" stroke-width="0.5"/>
+    <circle cx="95" cy="597" r="4" fill="white" opacity="0.8"/>
+    <circle cx="1080" cy="550" r="12" fill="url(#bubble)" stroke="#85C1E9" stroke-width="0.5"/>
+    <circle cx="1076" cy="547" r="3.5" fill="white" opacity="0.8"/>
+  </g>
+
+</svg>
