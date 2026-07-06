@@ -1,65 +1,70 @@
-# Instalacion
+# Instalación
 
 ## Requisitos
 
-- Navegador web moderno (Chrome, Firefox, Safari, Edge)
-- Python 3 (para el servidor local)
+- Qt 6.x (Core, Gui, Widgets, Svg, Xml)
+- CMake 3.20+
+- Compilador C++17 (GCC, Clang, MSVC)
 
 ## Plataformas soportadas
 
-- Windows (7/8/10/11)
+- Windows (10/11)
 - macOS
 - Linux (Ubuntu, Debian, etc.)
-- Raspberry Pi (Raspberry OS)
 
-## Uso sin servidor
-
-Abrir directamente `index.html` en el navegador. Limitaciones:
-- No funciona el navegador de archivos del servidor
-- Solo importar SVGs por drag & drop o selector de archivos
-
-## Uso con servidor
-
-### Mac / Linux / Raspberry Pi
-
-```bash
-cd svg_effects
-python3 serve.py
-```
-
-O con el script bash (solo Mac/Linux):
-
-```bash
-./serve.sh 8080
-```
+## Instalar dependencias
 
 ### Windows
 
-```cmd
-cd svg_effects
-python serve.py
-```
+1. Instalar Qt 6 desde https://www.qt.io/download
+2. Instalar CMake desde https://cmake.org/download
+3. Instalar Visual Studio 2019+ con soporte C++
 
-O simplemente hacer doble clic en `serve.bat`.
-
-### Puerto personalizado
+### macOS
 
 ```bash
-# Mac / Linux / Raspberry Pi
-python3 serve.py 3000
-
-# Windows
-python serve.py 3000
+brew install qt@6 cmake
 ```
 
-### Detener servidor
+### Linux (Ubuntu/Debian)
 
-Presiona `Ctrl+C` en la terminal.
+```bash
+sudo apt install qt6-base-dev qt6-svg-dev cmake g++
+```
+
+## Compilación
+
+```bash
+cd qt
+mkdir build && cd build
+cmake ..
+cmake --build .
+```
+
+## Ejecución
+
+```bash
+./svg-animator
+```
 
 ## Estructura de archivos
 
-Coloca archivos SVG en el directorio `files/` para que aparezcan en el navegador de archivos del servidor.
+Los archivos SVG se cargan mediante el selector de archivos o drag & drop directamente en la aplicación.
+
+## Solución de problemas
+
+### Error: Qt6 not found
+
+Asegúrese de que Qt6 está en el PATH o especifique la ruta:
 
 ```bash
-cp mi-archivo.svg files/
+cmake -DCMAKE_PREFIX_PATH=/path/to/qt6 ..
+```
+
+### Error: CMake version
+
+Se requiere CMake 3.20 o superior:
+
+```bash
+cmake --version
 ```

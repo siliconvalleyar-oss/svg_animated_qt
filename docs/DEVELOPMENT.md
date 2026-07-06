@@ -1,68 +1,79 @@
 # Desarrollo
 
-## Estructura del codigo
+## Estructura del código
 
-### styles.css
-- Variables CSS para theming
-- Layout (sidebar, preview, header)
-- Componentes UI (botones, sliders, toggles)
-- Animaciones CSS (keyframes y clases)
+### Módulos principales
 
-### app.js
-- **Presets**: Array de animaciones disponibles
-- **Shapes**: SVGs de formas predefinidas
-- **State**: Estado global (currentSvg, elementAnimations, slides)
-- **File browser**: Carga de SVGs del servidor
-- **Animation engine**: Aplicacion y control de animaciones
-- **Direction system**: Angulo y sentido para animaciones de translacion
-- **Group system**: Agrupar elementos para aplicar misma animacion
-- **Pieces mode**: Seleccion y movimiento de elementos
-- **Export**: Generacion de SVG animado
+- **MainWindow**: Ventana principal y orquestación de componentes
+- **SvgView**: Widget Qt para visualización y manipulación de SVGs
+- **AnimationEngine**: Motor de animaciones CSS con soporte para 13 presets
+- **ElementPanel**: Panel lateral para selección de elementos del SVG
+- **ControlsWidget**: Controles de animación (velocidad, dirección, etc.)
+- **ExportManager**: Generación de SVGs animados autocontenidos
+- **WorkspaceManager**: Gestión de múltiples espacios de trabajo
+- **TrajectoryManager**: Visualización de trayectorias de movimiento
+- **SlideshowManager**: Creación y reproducción de presentaciones
+- **Shapes**: Biblioteca de 12 formas predefinidas
+- **Theme**: Sistema de temas (claro/oscuro)
+- **BackgroundImageManager**: Gestión de imagen de fondo
 
-### index.html
-- Estructura semantica HTML5
-- Referencia a CSS y JS externos
-- Secciones del sidebar
+### Patrones de diseño
 
-## Agregar nueva animacion
+- **Signals/Slots**: Comunicación entre componentes Qt
+- **MVC implícito**: Separación de lógica y presentación
+- **Undo/Redo**: Pila de estados para operaciones reversibles
 
-1. Agregar preset en `app.js`:
-```js
-{ name: 'Mi Animacion', id: 'mi-anim', color: '#ff0000', duration: 1, easing: 'ease-in-out' }
+## Agregar nueva animación
+
+1. Agregar preset en `AnimationEngine.cpp`:
+
+```cpp
+Preset{"Mi Animación", "mi-anim", QColor("#ff0000"), 1.0, "ease-in-out"}
 ```
 
-2. Agregar clase CSS en `styles.css`:
-```css
-.anim-mi-anim { animation: svgMiAnim var(--dur) var(--easing) var(--iter) var(--dir); }
-```
+2. Agregar generación de keyframes en `AnimationEngine::generateKeyframes()`:
 
-3. Agregar keyframes en `styles.css`:
-```css
-@keyframes svgMiAnim {
-  0% { transform: ... }
-  100% { transform: ... }
+```cpp
+if (id == "mi-anim") {
+    keyframes = "@keyframes svgMiAnim { 0% { transform: ... } 100% { transform: ... } }";
 }
 ```
 
-4. Si la animacion usa translacion y soporta direccion, agregarla en `isTranslateBased` en `applyOneAnimation` y en `ensureDirectionKeyframes`.
-
-5. Agregar keyframe en export (seccion de keyframes individuales en `app.js`).
+3. Actualizar `ExportManager` si la animación requiere lógica especial
 
 ## Agregar nueva forma
 
-Agregar en el array `shapes` en `app.js`:
-```js
-{ name: 'Mi Forma', svg: '<svg viewBox="0 0 200 200">...</svg>' }
+Agregar en `Shapes.cpp`:
+
+```cpp
+{"Mi Forma", "<svg viewBox=\"0 0 200 200\">...</svg>"}
 ```
 
-## Servidor de desarrollo
+## Sistema de temas
+
+Los temas se definen en `Theme.cpp` con soporte para:
+- Colores de fondo
+- Colores de texto
+- Colores de acento
+- Bordes y sombras
+
+## Compilación en desarrollo
 
 ```bash
-./serve.sh 8080
+cd qt/build
+cmake --build . --target svg-animator
+./svg-animator
 ```
 
-Los cambios en CSS y JS se refrescan al recargar la pagina (no hay hot reload).
+## Testing
+
+```bash
+cd qt/build
+ctest --output-on-failure
+```
 
 ## Dependencias
 
-Ninguna. Solo vanilla HTML/CSS/JS.
+- Qt 6.x (Core, Gui, Widgets, Svg, Xml)
+- CMake 3.20+
+- Estándar C++17

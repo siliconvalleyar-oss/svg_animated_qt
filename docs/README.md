@@ -1,63 +1,62 @@
-# SVG Animator
+# SVG Animator Qt - Documentación
 
-Aplicacion web para animar archivos SVG con una amplia gama de efectos predefinidos y controles avanzados.
+Aplicación de escritorio para animar archivos SVG con una amplia gama de efectos predefinidos y controles avanzados. Desarrollada con Qt6/C++.
 
 ## Plataformas soportadas
 
-- Windows (7/8/10/11)
+- Windows (10/11)
 - macOS
 - Linux (Ubuntu, Debian, etc.)
-- Raspberry Pi (Raspberry OS)
 
-## Caracteristicas
+## Características
 
-- **13 animaciones preset**: Rotar, Rueda, Pulsar, Rebotar, Gravedad, Deslizar, Ovalo, Desvanecer, Dibujar, Temblar, Flotar, Girar, Brillar
-- **Controles avanzados**: Velocidad, retraso, repeticion, direccion
+- **13 animaciones preset**: Rotar, Rueda, Pulsar, Rebotar, Gravedad, Deslizar, Óvalo, Desvanecer, Dibujar, Temblar, Flotar, Girar, Brillar
+- **Controles avanzados**: Velocidad, retraso, repetición, dirección
 - **Modo piezas**: Seleccionar y mover elementos individuales del SVG
 - **Generador de formas**: 12 formas predefinidas para generar SVGs
-- **Importar SVG**: Drag & drop o seleccion de archivos
-- **Exportar**: Descarga SVGs con animaciones CSS embebidas
-- **Servidor local**: Script multiplataforma para servir la app en un puerto configurable
+- **Importar SVG**: Selector de archivos o drag & drop
+- **Exportar**: SVGs con animaciones CSS embebidas
+- **Slideshow**: Crear presentaciones con transiciones
+- **Undo/Redo**: Hasta 50 pasos
+- **Gestión de workspaces**: Múltiples espacios de trabajo
 
 ## Arquitectura
 
 ```
-svg_effects/
-  index.html       # Estructura HTML
-  styles.css       # Estilos y keyframes CSS
-  app.js           # Logica JavaScript
-  serve.py         # Servidor multiplataforma (Mac/Linux/Windows/Raspberry Pi)
-  serve.sh         # Script de servidor (solo Mac/Linux)
-  serve.bat        # Launcher para Windows
-  sample.svg       # SVG de ejemplo
-  files/           # Directorio de SVGs del servidor
-  docs/            # Documentacion
+qt/
+├── CMakeLists.txt        # Configuración CMake
+└── src/                  # Código fuente C++
+    ├── main.cpp          # Punto de entrada
+    ├── MainWindow.cpp/h  # Ventana principal
+    ├── SvgView.cpp/h     # Widget de visualización SVG
+    ├── AnimationEngine.cpp/h  # Motor de animaciones
+    ├── ElementPanel.cpp/h     # Panel de elementos
+    ├── ControlsWidget.cpp/h   # Controles de animación
+    ├── ExportManager.cpp/h    # Gestor de exportación
+    ├── WorkspaceManager.cpp/h # Gestor de workspaces
+    ├── TrajectoryManager.cpp/h # Gestor de trayectorias
+    ├── SlideshowManager.cpp/h  # Gestor de slideshow
+    ├── Shapes.cpp/h           # Formas predefinidas
+    ├── Theme.cpp/h            # Temas de color
+    └── BackgroundImageManager.cpp/h # Gestor de fondo
 ```
 
-## Rapido inicio
-
-### Mac / Linux / Raspberry Pi
+## Compilación rápida
 
 ```bash
-python3 serve.py
-# o
-./serve.sh 8080
-# Abrir http://localhost:8080
+cd qt
+mkdir build && cd build
+cmake ..
+cmake --build .
+./svg-animator
 ```
 
-### Windows
+## Documentación
 
-```cmd
-python serve.py
-# o hacer doble clic en serve.bat
-# Abrir http://localhost:8080
-```
-
-## Documentacion
-
-- [Instalacion](INSTALLATION.md)
+- [Instalación](INSTALLATION.md)
 - [Animaciones](ANIMATIONS.md)
 - [Controles](CONTROLS.md)
 - [Modo Piezas](PIECES.md)
 - [Exportar](EXPORT.md)
 - [Desarrollo](DEVELOPMENT.md)
+- [TODO](TODO.md)
